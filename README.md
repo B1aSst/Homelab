@@ -27,6 +27,8 @@ I tried to buy hardware with a minimalist approach, I don't wanted things too no
 - Ubiquiti UniFi UAP-nanoHD (Wi-Fi Access Point)
 - APC Back-UPS (Battery backup & Surge protector)
 
+I will try to explain my choice as much as possible but some just don't have explanation...
+
 I started with the Synology NAS, today I think it was a mistake but I had to start somewhere. I think it was too expensive and today I only use it purely as a NAS but it can be used as a home server as it support Docker and has a lot of app built-in.
 
 I got the fortigate, switch, and AP from second-hand. No need to buy them full price as I'm not a company...

@@ -2,14 +2,15 @@ vars: {
   d2-config: {
     layout-engine: elk
     # Terminal theme code
-    #theme-id: 300
+    theme-id: 300
   }
 }
 
 direction: right
 
-Homelab-net {
-    Fortigate: {
+Homelab Network {
+    style.stroke: green
+    Fortigate 60E: {
         shape: image
         icon: https://icons.terrastruct.com/infra%2F003-firewall.svg
         style {
@@ -31,7 +32,7 @@ Homelab-net {
         }
     }
 
-    Wi-Fi AP: {
+    UAP-nanoHD: {
         shape: circle
         style {
             stroke: deepskyblue
@@ -48,14 +49,15 @@ Homelab-net {
         }
     }
 
-    Fortigate -- Cisco SG300: LAG trunk {style.animated: true}
-    Fortigate -- Cisco SG300: LAG trunk {style.animated: true}
-    Fortigate -- Proxmox node: DMZ trunk {style.animated: true}
+    Fortigate 60E -- Cisco SG300: LAG trunk {style.animated: true}
+    Fortigate 60E -- Cisco SG300: LAG trunk {style.animated: true}
+    Fortigate 60E -- Proxmox node: DMZ trunk {style {animated: true
+                                                    stroke: red}}
 
     Cisco SG300 -- Proxmox node: LAG trunk {style.animated: true}
     Cisco SG300 -- Proxmox node: LAG trunk {style.animated: true}
     Cisco SG300 -- Synology DS223 {style.animated: true}
-    Cisco SG300 -- Wi-Fi AP: trunk {style.animated: true}
+    Cisco SG300 -- UAP-nanoHD: trunk {style.animated: true}
 }
 
 
@@ -74,4 +76,6 @@ ISP router: {
         animated: true
     }
 }
-Internet -- ISP router -- Homelab-net.Fortigate {style.animated: true}
+Internet -- ISP router: 500Mb/s Fiber {style.animated: true}
+ISP router -- Homelab Network.Fortigate 60E: Redundant link {style.animated: true}
+ISP router -- Homelab Network.Fortigate 60E: Redundant link {style.animated: true}
