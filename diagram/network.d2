@@ -6,6 +6,8 @@ vars: {
   }
 }
 
+direction: right
+
 Homelab-net {
     Fortigate: {
         shape: image
@@ -21,46 +23,55 @@ Homelab-net {
         }
     }
 
-    Proxmox node
+    Proxmox node : {
+        shape: image
+        icon: https://icons.terrastruct.com/essentials%2F112-server.svg
+        style {
+            animated: true
+        }
+    }
 
     Wi-Fi AP: {
         shape: circle
         style {
             stroke: deepskyblue
             double-border: true
+            animated: true
         }
     }
 
     Synology DS223: {
         shape: image
         icon: https://icons.terrastruct.com/essentials%2F117-database.svg
+        style {
+            animated: true
+        }
     }
 
-    Fortigate -- Cisco SG300: LAG trunk
-    Fortigate -- Cisco SG300: LAG trunk
-    Fortigate -- Proxmox node: DMZ trunk
+    Fortigate -- Cisco SG300: LAG trunk {style.animated: true}
+    Fortigate -- Cisco SG300: LAG trunk {style.animated: true}
+    Fortigate -- Proxmox node: DMZ trunk {style.animated: true}
 
-    Cisco SG300 -- Proxmox node: LAG trunk
-    Cisco SG300 -- Proxmox node: LAG trunk
-    Cisco SG300 -- Synology DS223
-    Cisco SG300 -- Wi-Fi AP: trunk
+    Cisco SG300 -- Proxmox node: LAG trunk {style.animated: true}
+    Cisco SG300 -- Proxmox node: LAG trunk {style.animated: true}
+    Cisco SG300 -- Synology DS223 {style.animated: true}
+    Cisco SG300 -- Wi-Fi AP: trunk {style.animated: true}
 }
 
 
 Internet: {
     shape: image
     icon: https://icons.terrastruct.com/essentials%2F140-internet.svg
+    style {
+        animated: true
+    }
 }
 
 ISP router: {
     shape: image
     icon: https://icons.terrastruct.com/tech%2Frouter.svg
+    style {
+        animated: true
+    }
 }
-
-user: {
-  shape: person
-  width: 130
-}
-
-direction: down
 Internet -- ISP router -- Homelab-net.Fortigate {style.animated: true}
