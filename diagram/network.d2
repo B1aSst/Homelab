@@ -1,0 +1,66 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    # Terminal theme code
+    #theme-id: 300
+  }
+}
+
+Homelab-net {
+    Fortigate: {
+        shape: image
+        icon: https://icons.terrastruct.com/infra%2F003-firewall.svg
+        style {
+            animated: true
+        }
+    }
+
+    Cisco SG300: {
+        style {
+            animated: true
+        }
+    }
+
+    Proxmox node
+
+    Wi-Fi AP: {
+        shape: circle
+        style {
+            stroke: deepskyblue
+            double-border: true
+        }
+    }
+
+    Synology DS223: {
+        shape: image
+        icon: https://icons.terrastruct.com/essentials%2F117-database.svg
+    }
+
+    Fortigate -- Cisco SG300: LAG trunk
+    Fortigate -- Cisco SG300: LAG trunk
+    Fortigate -- Proxmox node: DMZ trunk
+
+    Cisco SG300 -- Proxmox node: LAG trunk
+    Cisco SG300 -- Proxmox node: LAG trunk
+    Cisco SG300 -- Synology DS223
+    Cisco SG300 -- Wi-Fi AP: trunk
+}
+
+
+Internet: {
+    shape: image
+    icon: https://icons.terrastruct.com/essentials%2F140-internet.svg
+}
+
+ISP router: {
+    shape: image
+    icon: https://icons.terrastruct.com/tech%2Frouter.svg
+}
+
+user: {
+  shape: person
+  width: 130
+}
+
+direction: down
+Internet -- ISP router -- Homelab-net.Fortigate {style.animated: true}
