@@ -26,7 +26,6 @@ d2 play my-diagram.d2
 Some libraries for icons:
 - [terrastruct](https://icons.terrastruct.com/)
 - [homelab-svg-assets](https://github.com/loganmarchione/homelab-svg-assets?tab=readme-ov-file)
-## Architecture
+## Physical architecture
 
-**Physical diagram :**
 ![physical diagram](network.svg)

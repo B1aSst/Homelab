@@ -47,6 +47,10 @@ I bought the UPS because there is power cut sometimes so my lab doesn't go offli
 
 You will find network diagram [here](/diagram/README.md).
 
+## Services
+
+To-do...
+
 ## Roadmap
 
 - [ ] PVE Cluster
