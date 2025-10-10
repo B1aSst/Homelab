@@ -29,27 +29,27 @@ I tried to buy hardware with a minimalist approach, I don't wanted things too no
 
 I will try to explain my choice as much as possible but some just don't have explanation...
 
-I started with the Synology NAS, today I think it was a mistake but I had to start somewhere. I think it was too expensive and today I only use it purely as a NAS but it can be used as a home server as it support Docker and has a lot of app built-in.
+It started with the Synology NAS, today I think it was a mistake but I had to start somewhere. I think it was too expensive for my usage and today I only use it purely as a NAS but it can be used as a home server as it support Docker and has a lot of app built-in.
 
-I got the fortigate, switch, and AP from second-hand. No need to buy them full price as I'm not a company...
-
-The fortigate is a great appliance and nice to have because I use them at work and so I can practice with it. I use it as a traffic filter for my VLANs.
-
-A switch ? Cisco
-
-I bought the NAB5 mini pc because I simply wanted something powerfull, small and not too noisy. It has a great CPU and 32GB of RAM and run Proxmox VE.
-
-I got the AP from second hand and it's working fine so far. The Ubiquiti UI is very great and the AP can be fully configured. I used it to broadcast different SSIDs.
-
-I bought the UPS because there is power cut sometimes so my lab doesn't go offline.
+I got the fortigate, switch, and AP from second-hand. No need to buy them full price as I'm not a company... The fortigate is a great appliance and nice to have because I use them at work and so I'ts nice to practice. I'ts mainly to filter traffic between VLANs. The AP is use to diffuse VLAN in the house. The NAB5 mini pc because I simply wanted something powerfull, small and not too noisy. It has a great CPU and 32GB of RAM, it run Proxmox VE with several VM/LXC.
+There is power cut sometimes so the UPS makes my lab not go down.
 
 ## Diagrams
 
-You will find network diagram [here](/diagram/README.md).
+You will find my how to diagram [here](/diagrams/diagram.md).
+
+Here is my physical setup
+![physical diagram](diagrams/svg/network.svg)
 
 ## Services
 
+### Network
+
 To-do...
+
+## Guides
+
+Some guides [here](/guides)
 
 ## Roadmap
 
